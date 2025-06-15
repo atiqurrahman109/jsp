@@ -8,24 +8,24 @@ package model;
  *
  * @author User
  */
-public class employee {
+public class Employee {
     
     private int id;
     private String name;
     private String designation;
     private String salary;
 
-    public employee() {
+    public Employee() {
     }
 
-    public employee(int id, String name, String designation, String salary) {
+    public Employee(int id, String name, String designation, String salary) {
         this.id = id;
         this.name = name;
         this.designation = designation;
         this.salary = salary;
     }
 
-    public employee(String name, String designation, String salary) {
+    public Employee(String name, String designation, String salary) {
         this.name = name;
         this.designation = designation;
         this.salary = salary;

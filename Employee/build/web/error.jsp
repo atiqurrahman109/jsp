@@ -1,3 +1,3 @@
 
-<<h2"text-danger"> student not saved </h2>
-<%@include file="addstudentform.jsp" %>
+<h2"text-danger"> employee not saved </h2>
+<%@include file="addemployee.jsp" %>

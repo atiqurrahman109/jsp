@@ -5,7 +5,7 @@
         <h1 class="jumborton">Add employee</h1>
     </div>
     <!--    start form-->
-    <form action="addStudent.jsp"  method="post">
+    <form action="addemployee.jsp"  method="post">
         <div class="row">
             <div class="col-md-6">
                 <label for="exampleInputEmail1" class="form-label">Name</label>

@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  */
 public class DbUtil {
     
-     private static Connection con=null;
+    private static Connection con=null;
     private static String url="jdbc:mysql://localhost:3306/jsp";
     private static String user="root";
     private static String password="1234";
@@ -27,9 +27,7 @@ public class DbUtil {
          try {
              Class.forName(driver);
              con = DriverManager.getConnection(url, user, password);
-         } catch (ClassNotFoundException ex) {
-             Logger.getLogger(DbUtil.class.getName()).log(Level.SEVERE, null, ex);
-         } catch (SQLException ex) {
+         } catch (ClassNotFoundException | SQLException ex) {
              Logger.getLogger(DbUtil.class.getName()).log(Level.SEVERE, null, ex);
          }
     
