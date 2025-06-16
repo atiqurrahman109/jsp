@@ -1,3 +1,5 @@
+
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@page import="model.Employee" %>
@@ -38,9 +40,12 @@
                       <td>${e.getName()}</td>
                       <td>${e.getDesignation()}</td>
                       <td>${e.getSalary()}</td>
+                      
                       <td>
-                          <button type="submit" class=" btn btn-primary"> Edit </button>
-                          <button type="submit" class=" btn btn-danger"> Delete </button>
+                          <a href="editemployee.jsp?id=${e.id}" class="btn btn-primary">edit</a>
+                          <a href="deleteemployee.jsp?id=${e.id}" class="btn btn-danger">delete</a>
+                          
+                          onclick ="return confirm('Are you sure you want to delete this employee?');">Delete</a>-->
                       </td>
                       
                   </tr>

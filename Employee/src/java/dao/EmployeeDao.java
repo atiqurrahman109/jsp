@@ -81,6 +81,94 @@ public class EmployeeDao {
 
     }
 
+    public static void deleteEmployee(){
+    
+        sql="delete from employee where id=?";
+        try {
+            ps=DbUtil.getCon().prepareStatement(sql);
+            int id = 0;
+            ps.setInt(1, id);
+            
+            ps.executeUpdate();
+            ps.close();
+            DbUtil.getCon().close();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(EmployeeDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    
+    }
+    
+    public static Employee getById(int id){
+    
+        //Employee e=null;
+        
+    sql="select * from employee where id=?";
+    
+        try {
+            ps=DbUtil.getCon().prepareStatement(sql);
+            
+            ps.setInt(1, id);
+            
+            rs=ps.executeQuery();
+            
+            while(rs.next()){
+            
+                Employee e = new Employee(
+                        
+                        rs.getInt(id),
+                        rs.getString("name"),
+                        rs.getString("designation"),
+                        rs.getString("salary")
+                );
+            
+            }
+            
+            ps.close();
+            rs.close();
+            DbUtil.getCon().close();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(EmployeeDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Employee e = null;
+        return e;
+    
+    }
+    
+    public static int updateEmployee(Employee e){
+    
+    sql="update employee set name=?,designation=?,salary=? where id=?";
+    
+        try {
+            ps=DbUtil.getCon().prepareStatement(sql);
+            
+          ps.setString(1, e.getName());
+          ps.setString(2, e.getDesignation());
+          ps.setString(3, e.getSalary());
+          ps.setInt(4, e.getId());
+          
+        ResultSet status = ps.executeQuery();
+            System.out.println("status");
+            
+            ps.close();
+         DbUtil.getCon().close();
+          
+          
+          
+          
+        } catch (SQLException ex) {
+            Logger.getLogger(EmployeeDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int status = 0;
+        return  status;
+    
+    
+    
+    
+    
+    }
     
     
 }
