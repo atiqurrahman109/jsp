@@ -42,10 +42,11 @@
                       <td>${e.getSalary()}</td>
                       
                       <td>
-                          <a href="editemployee.jsp?id=${e.id}" class="btn btn-primary">edit</a>
-                          <a href="deleteemployee.jsp?id=${e.id}" class="btn btn-danger">delete</a>
+                          <a href="editemployeefrom.jsp?id=${e.id}" class="btn btn-primary">edit</a>
                           
-                          onclick ="return confirm('Are you sure you want to delete this employee?');">Delete</a>-->
+                          <a href="deleteemployee.jsp?id=${e.id}" class="btn btn-danger"
+                            onclick ="return confirm('Are you sure you want to delete this employee?');">Delete</a>
+                        
                       </td>
                       
                   </tr>

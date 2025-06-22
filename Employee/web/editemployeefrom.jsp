@@ -22,7 +22,7 @@
         <h1 class="jumborton">Update employee</h1>
     </div>
     <!--    start form-->
-    <form action="editstudent.jsp"  method="post">
+    <form action="editemployee.jsp"  method="post">
         <input type="hidden" name="id" value="<%=e.getId()%>" />
 
         <div class="row">
@@ -39,9 +39,9 @@
                 <label  class="form-label">designation</label>
                 <select class="form-select" name="designation" aria-label="Default select example">
                     <option disabled>Select Anyone</option>
-                    <option value="junior software engineer" <%= "junior software engineer".equals(e.getSubject()) ? "selected" : "" %>>junior software engineer</option>
-                    <option value="senior software engineer" <%= "senior software engineer".equals(e.getSubject()) ? "selected" : "" %>>senior software engineer</option>
-                    <option value="manager" <%= "manager".equals(e.getSubject()) ? "selected" : "" %>>manager</option>
+                    <option value="juniorsoftwareengineer" <%= "juniorsoftwareengineer".equals(e.getDesignation()) ? "selected" : "" %>>junior software engineer</option>
+                    <option value="seniorsoftwareengineer" <%= "seniorsoftwareengineer".equals(e.getDesignation()) ? "selected" : "" %>>senior software engineer</option>
+                    <option value="manager" <%= "manager".equals(e.getDesignation()) ? "selected" : "" %>>manager</option>
                   
                 </select>
             </div>

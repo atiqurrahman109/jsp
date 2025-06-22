@@ -20,8 +20,8 @@
                 <label  class="form-label">Designation</label>
                 <select class="form-select" name="designation" aria-label="Default select example">
                     <option selected>Select Anyone</option>
-                    <option value="junior software officer">junior software engineer</option>
-                    <option value="senior software engineer">senior software engineer</option>
+                    <option value="juniorsoftwareengineer">junior software engineer</option>
+                    <option value="seniorsoftwareengineer">senior software engineer</option>
                     <option value="manager">manager</option>
                    
                 </select>
